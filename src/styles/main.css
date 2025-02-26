@@ -1,0 +1,223 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	user-select: none;
+	font-family: sans-serif;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+}
+
+menu {
+	width: 40vw;
+	height: 100%;
+	min-width: 400px;
+	padding: 2rem;
+	background-color: #fff;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+}
+
+#search {
+	width: 90%;
+	height: 3rem;
+	padding: 1rem;
+	border: 2px solid #eee;
+	border-radius: 20px;
+	background-color: #eee;
+	font-size: 1rem;
+	transition: background 0.3s, border 0.3s;
+}
+
+#search:hover {
+	background-color: #e0e0e0;
+	border: 2px solid #e0e0e0;
+}
+
+#search:focus {
+	border: 2px solid #aaa;
+	outline: none;
+}
+
+#task-counter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#task-counter .total {
+	font-size: 1.4rem;
+	color: #808080;
+}
+
+#task-counter .detail {
+	font-size: 0.8rem;
+	color: #aaa;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 30px;
+	background-color: #e1e1e1;
+	font-size: 1rem;
+	transition: background 0.1s, color 0.1s;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #ccc;
+}
+
+button:active {
+	background-color: #808080;
+	color: #fff;
+}
+
+#clear-container p,
+#filters p {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+main {
+	width: 100%;
+	padding: 2rem;
+	background-color: #f2f2f2;
+	display: flex;
+	flex-direction: column;
+}
+
+#task-manager {
+	margin-top: 2rem;
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+}
+
+#task-manager .remove-buttons {
+	display: flex;
+	gap: 5px;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.remove {
+	background-color: #f00;
+	color: #fff;
+	padding: 0;
+	width: 2rem;
+	height: 2rem;
+	font-size: 1.5rem;
+	border-radius: 50%;
+	transition: background 0.2s, color 0.2s;
+}
+
+#cancel-remove-task.disabled {
+	display: none;
+}
+
+#cancel-remove-task, #remove-task.selected {
+	width: auto;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 30px;
+	font-size: 0.8rem;
+}
+
+#remove-task::before {
+	content: "-";
+}
+
+#remove-task.selected::before {
+	content: "Remover selecionados";
+}
+
+#add-task {
+	background-color: #0a0;
+	color: #fff;
+	padding: 0;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	transition: background 0.1s, color 0.1s;
+}
+
+.remove:hover,
+#add-task:hover {
+	background-color: #ccc;
+	color: #000;
+}
+
+.remove:active,
+#add-task:active {
+	background-color: #000;
+	color: #fff;
+}
+
+#tasks {
+	margin-top: 40px;
+	flex: 1;
+	overflow: auto;
+	max-height: 100%;
+}
+
+#tasks ul {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	list-style: none;
+}
+
+#tasks ul li {
+	padding: 1rem;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	background-color: #e0eaff;
+	border-radius: 15px;
+}
+
+#tasks ul li input[type="checkbox"] {
+	appearance: none;
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: relative;
+	transition: background 0.2s, border 0.2s;
+}
+
+#tasks ul li input[type="checkbox"]:checked {
+	background-color: #0b8013;
+	border: #0b8013;
+}
+
+#tasks ul li input[type="checkbox"]:checked::before {
+	content: "\2713"; /* Símbolo de check */
+	color: white; /* Cor do símbolo */
+	font-size: 14px; /* Tamanho do símbolo */
+	position: absolute; /* Posicionamento dentro do círculo */
+	top: 50%; /* Centraliza verticalmente */
+	left: 50%; /* Centraliza horizontalmente */
+	transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+}
+
+#tasks input#select {
+	width: 20px;
+	height: 20px;
+	margin-left: auto;
+	appearance: auto;
+}
+
+#tasks input#select::before {
+	content: "";
+}

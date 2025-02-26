@@ -1,0 +1,74 @@
+section.add-task {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.67);
+	width: 100vw;
+	height: 100vh;
+}
+
+section.add-task div.container {
+	background-color: #fff;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80vw;
+	max-width: 500px;
+	padding: 2rem;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+#task {
+    width: 90%;
+    height: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #eee;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#task:hover {
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+
+#task:focus {
+    border-color: #aaa;
+    outline: none;
+}
+
+.container .cancel,
+.container .add {
+	color: #fff;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.container .cancel {
+	background-color: #f00;
+}
+
+.container .add {
+	background-color: #0a0;
+}
+
+.container .cancel:hover,
+.container .add:hover {
+	background-color: #ccc;
+	color: #000;
+}
+
+.container .cancel:active,
+.container .add:active {
+	background-color: #000;
+	color: #fff;
+}
+
+.add-buttons {
+    display: flex;
+    gap: 10px;
+}

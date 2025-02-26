@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/styles/main.css">
+        <link rel="stylesheet" href="./src/styles/responsive.css">
+        <link rel="stylesheet" href="./src/styles/task_section.css">
+        <title>To-Do List</title>
+	</head>
+	<body>
+		<menu>
+			<input type="text" id="search" placeholder="Buscar tarefa..." />
+			<div id="task-counter">
+                <p class="total">0 tarefas no total</p>
+                <p class="detail">&#40;0 pendentes e 0 concluídas&#41;</p>
+            </div>
+			<div id="clear-container">
+                <p><b>Limpar as tarefas:</b></p>
+				<button id="clear-completed">Concluídas</button>
+				<button id="clear-all">Todas</button>
+			</div>
+			<div id="filters">
+                <p><b>Filtrar por:</b></p>
+				<button id="filter-all">Todas</button>
+				<button id="filter-pending">Pendentes</button>
+				<button id="filter-completed">Concluídas</button>
+			</div>
+		</menu>
+		<main>
+            <div id="task-manager">
+                <div class="remove-buttons">
+                    <button id="cancel-remove-task" class="remove disabled">Cancelar remoção</button>
+                    <button id="remove-task" class="remove"></button>
+                </div>
+                <button id="add-task">+</button>
+            </div>
+            <div id="tasks">
+                <ul></ul>
+            </div>
+        </main>
+        <script src="./src/scripts/main.js"></script>
+	</body>
+</html>
