@@ -19,7 +19,7 @@ Uma aplicação simples de lista de tarefas que permite adicionar, marcar como c
 
 1. **Clone o repositório**  
    ```sh
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/elvieira/todo-list.git
 2. **Abra o arquivo** `index.html` **no navegador**
 3. **Adicione tarefas** clicando no botão **"Adicionar"**
 4. **Marque/desmarque** tarefas ao clicar no checkbox
